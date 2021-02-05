@@ -24,5 +24,18 @@ const resultado = await buscaCep(cep)
 
     res.render('resultado', {dado:resultado})
 }) 
+
+app.post('/rua-cep',async(req,res) => {
+    const {cep} = req.body
+    const resultado = await buscaCep(cep)
+    
+        res.render('rua', {dado:resultado})
+    }) 
+
+
+
+
+
+
 app.listen(3333)
 
